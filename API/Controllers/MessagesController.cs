@@ -12,11 +12,12 @@ namespace API.Controllers
         private readonly IUserRepository _userRepository;
         private readonly IMessageRepository _messageRepository;
         private readonly IMapper _mapper;
-        private MessagesController(IUserRepository userRepository, IMessageRepository messageRepository, IMapper mapper)
+        
+        public MessagesController(IUserRepository userRepository, IMessageRepository messageRepository, IMapper mapper)
         {
-            _userRepository = userRepository;
-            _messageRepository = messageRepository;
             _mapper = mapper;
+            _messageRepository = messageRepository;
+            _userRepository = userRepository;
         }
 
         public async Task<ActionResult<MessageDto>> CreateMassage(CreateMessageDto createMessageDto)
