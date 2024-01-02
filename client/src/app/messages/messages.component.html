@@ -41,13 +41,13 @@
                 <th style="width: 20%;"></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="align-middle">
             <tr *ngFor="let message of messages">
                 <td>{{message.content}}</td>
                 <td>
                     <a [routerLink]="container === 'Outbox'
                                 ? '/members/' + message.recipientUsername
-                                : '/members/' + message.senderUsername">
+                                : '/members/' + message.senderUsername" [queryParams]="{tab: 'Messages'}">
               
                         <div *ngIf="container === 'Outbox'">
                             <img 
