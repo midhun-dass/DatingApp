@@ -7,3 +7,12 @@ img {
     border: 2px solid white;
     display: inline;
 }
+
+.navbar-nav {
+    padding: 0px 0px 0px 0px;
+}
+
+.user-profile {
+    border-radius: 20px;
+    height: 40px;
+}
